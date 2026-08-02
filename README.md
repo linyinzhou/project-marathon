@@ -18,7 +18,7 @@ python scripts/status.py --date 2026-08-02
 `fetch_sources.py` collects publicly listed open-registration events and writes them to `data/events.json`.
 `status.py` reads `data/events.json` by default, falling back to `data/events.sample.json` when the generated data file is unavailable.
 
-By default, `status.py` displays priority events only: A-class events, events in selected tier-one or tier-two cities, and events marked as gold, platinum, or championship events. Use `--all` to inspect every collected event.
+By default, `status.py` displays priority events only: A-class events, events in selected tier-one or tier-two cities, and gold-label, platinum-label, or label events. Use `--all` to inspect every collected event.
 
 ## Data Fields
 
