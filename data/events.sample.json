@@ -1,0 +1,62 @@
+[
+  {
+    "name": "2026沈阳马拉松",
+    "race_date": "2026-09-06T07:00:00+08:00",
+    "province": "辽宁",
+    "city": "沈阳",
+    "category": "A类",
+    "registration_start": null,
+    "registration_end": "2026-08-02T14:00:00+08:00",
+    "source_name": "闹跑",
+    "source_url": "https://www.nowrun.cn/",
+    "notes": "聚合站显示 2026-08-02 14:00 截止，需以官方渠道复核。"
+  },
+  {
+    "name": "2026太原马拉松",
+    "race_date": "2026-09-27T07:30:00+08:00",
+    "province": "山西",
+    "city": "太原",
+    "category": "A类",
+    "registration_start": null,
+    "registration_end": "2026-08-03T23:59:00+08:00",
+    "source_name": "闹跑",
+    "source_url": "https://www.nowrun.cn/",
+    "notes": "聚合站显示 2026-08-03 23:59 截止，需以官方渠道复核。"
+  },
+  {
+    "name": "2026南京马拉松",
+    "race_date": "2026-11-22T07:30:00+08:00",
+    "province": "江苏",
+    "city": "南京",
+    "category": "A类",
+    "registration_start": null,
+    "registration_end": "2026-09-02T23:59:00+08:00",
+    "source_name": "闹跑",
+    "source_url": "https://www.nowrun.cn/",
+    "notes": "聚合站显示距 2026-08-02 约 31 天后截止，具体时刻待官方复核。"
+  },
+  {
+    "name": "2026长安汽车重庆马拉松",
+    "race_date": "2026-01-18T08:30:00+08:00",
+    "province": "重庆",
+    "city": "重庆",
+    "category": "金标",
+    "registration_start": "2025-08-18T00:00:00+08:00",
+    "registration_end": "2025-08-24T23:59:00+08:00",
+    "source_name": "中国马拉松",
+    "source_url": "https://chinamarathon.com/events/23570",
+    "notes": "中国马拉松赛事库样例，用于验证已截止/已比赛状态。"
+  },
+  {
+    "name": "测试：今天开始报名越野赛",
+    "race_date": "2026-10-18T08:00:00+08:00",
+    "province": "浙江",
+    "city": "杭州",
+    "category": "越野",
+    "registration_start": "2026-08-02T10:00:00+08:00",
+    "registration_end": "2026-08-20T18:00:00+08:00",
+    "source_name": "本地测试",
+    "source_url": "",
+    "notes": "用于验证今天开始报名状态。"
+  }
+]
