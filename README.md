@@ -20,6 +20,8 @@ python scripts/status.py --date 2026-08-02
 
 By default, `status.py` displays priority events only: A-class events, events in selected tier-one or tier-two cities, and gold-label, platinum-label, or label events. Use `--all` to inspect every collected event.
 
+The dashboard keeps the existing status filters scoped to Chinese races and presents selected Japanese races in a separate Overseas Events view with race and registration dates.
+
 ## Automatic Updates
 
 The `Update marathon events` GitHub Actions workflow runs every day at approximately 06:15 China Standard Time. It collects the current event list, rejects empty results, and commits valid changes to `data/events.json`. The dashboard reads that file when the page opens, so newly committed data appears without a separate site deployment.
