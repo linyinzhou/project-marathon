@@ -18,6 +18,13 @@ NOWRUN_URL = "https://www.nowrun.cn/"
 RUN_IN_JAPAN_URL = "https://runinjapan.com/en/calendar?tab=register"
 TOKYO_MARATHON_URL = "https://www.marathon.tokyo/en/participants/"
 OSAKA_MARATHON_URL = "https://www.osaka-marathon.com/2027/en/runner/entry/admission/"
+LETOUR_URL = "http://www.letoursport.com/"
+TSAIGU_URL = "https://tsaigu.com/"
+UTMB_EVENTS_URL = "https://utmb.world/en/utmb-world-series-events"
+CHONGLI_168_URL = (
+    "https://sport.luojiweiye.com/api/H5/website/nav_info"
+    "?id=968&type=1&website_id=9"
+)
 ENGLISH_MONTHS = {
     month: index
     for index, month in enumerate(
@@ -56,6 +63,7 @@ def normalize_text(value):
 
 
 def fetch_text(url):
+    timeout = 120 if url == UTMB_EVENTS_URL else 30
     request = urllib.request.Request(
         url,
         headers={
@@ -64,7 +72,7 @@ def fetch_text(url):
         },
     )
     try:
-        with urllib.request.urlopen(request, timeout=30) as response:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
             charset = response.headers.get_content_charset() or "utf-8"
             return response.read().decode(charset, "replace")
     except Exception as urllib_error:
@@ -76,7 +84,7 @@ def fetch_text(url):
                 "--silent",
                 "--show-error",
                 "--max-time",
-                "30",
+                str(timeout),
                 "--header",
                 "Accept-Language: en,zh-CN;q=0.9",
                 "--user-agent",
@@ -417,6 +425,179 @@ def parse_run_in_japan(page_html, base_date):
     return dedupe_events(parser.events)
 
 
+def trail_event(name, race_date, registration_status, source_name, source_url, **extra):
+    return {
+        "name": name,
+        "race_date": race_date,
+        "race_time_known": False,
+        "province": extra.get("province", ""),
+        "city": extra.get("city", ""),
+        "country": "中国",
+        "category": "越野赛",
+        "discipline": "trail",
+        "registration_start": None,
+        "registration_end": None,
+        "registration_status": registration_status,
+        "registration_platform": source_name,
+        "source_name": source_name,
+        "source_group": extra.get("source_group", source_name),
+        "source_url": source_url,
+        "app_only": False,
+        "verified": True,
+        "last_checked_at": datetime.now(TZ).isoformat(timespec="seconds"),
+        "notes": extra.get("notes", "Registration status and race date from the official website."),
+    }
+
+
+def parse_official_date(value):
+    match = re.search(r"(20\d{2})[年./-](\d{1,2})[月./-](\d{1,2})", value)
+    if not match:
+        return None
+    return datetime(*map(int, match.groups()), tzinfo=TZ).isoformat()
+
+
+def registration_status_from_text(text, race_date, base_date):
+    if race_date and parse_dt_date(race_date) < base_date:
+        return "closed"
+    labels = {
+        "报名已截止": "closed",
+        "我要报名": "open",
+        "报名未开始": "upcoming",
+        "即将开始": "upcoming",
+        "敬请期待": "upcoming",
+    }
+    hits = [(text.find(label), status) for label, status in labels.items() if label in text]
+    return min(hits)[1] if hits else "unknown"
+
+
+def parse_dt_date(value):
+    return datetime.fromisoformat(value).astimezone(TZ).date()
+
+
+def parse_organizer_event(page_html, base_date, name, source_name, source_url, source_group):
+    text = normalize_text(page_html)
+    configured_title = re.search(r"\$CONFIG\.title\s*=\s*['\"]([^'\"]+)", page_html)
+    if configured_title:
+        page_title = html.unescape(configured_title.group(1)).strip()
+        if not page_title.startswith("【"):
+            name = page_title
+    year_match = re.search(r"(20\d{2})", name)
+    date_match = re.search(
+        r"(?<!\d)(0?[1-9]|1[0-2])/(0?[1-9]|[12]\d|3[01])\s*[-至—]\s*"
+        r"(0?[1-9]|1[0-2])/(0?[1-9]|[12]\d|3[01])(?!\d)",
+        text,
+    )
+    if not year_match or not date_match:
+        date_match = re.search(
+            r"出发时间\s*[:：]?\s*(20\d{2})年(\d{1,2})月(\d{1,2})日", text
+        )
+        if not date_match:
+            raise ValueError(f"race date not found for {name}")
+        year, month, day = map(int, date_match.groups())
+    else:
+        year = int(year_match.group(1))
+        month, day = map(int, date_match.groups()[:2])
+    race_date = datetime(year, month, day, tzinfo=TZ).isoformat()
+    status = registration_status_from_text(text, race_date, base_date)
+    return trail_event(
+        name, race_date, status, source_name, source_url, source_group=source_group
+    )
+
+
+def organizer_links(page_html, base_url, keywords):
+    links = []
+    pattern = re.compile(
+        r"<a\b[^>]*href=['\"](?P<href>/events\?mid=\d+)['\"][^>]*>(?P<body>.*?)</a>",
+        flags=re.I | re.S,
+    )
+    for match in pattern.finditer(page_html):
+        name = normalize_text(match.group("body"))
+        if name and any(keyword in name for keyword in keywords):
+            links.append((name, base_url.rstrip("/") + match.group("href")))
+    return list(dict.fromkeys(links))
+
+
+def collect_letour(page_html, base_date, fetcher=fetch_text):
+    links = organizer_links(page_html, LETOUR_URL, ("越野", "跑山", "100"))
+    events = []
+    for name, url in links:
+        if not re.search(r"20\d{2}", name):
+            continue
+        try:
+            events.append(parse_organizer_event(
+                fetcher(url), base_date, name, "朗途体育官网", url, "朗途体育官网"
+            ))
+        except (RuntimeError, ValueError):
+            continue
+    return dedupe_events(events)
+
+
+def collect_tsaigu(page_html, base_date, fetcher=fetch_text):
+    links = organizer_links(page_html, TSAIGU_URL, ("柴古", "越野", "蜀道"))
+    events = []
+    for name, url in links:
+        try:
+            events.append(parse_organizer_event(
+                fetcher(url), base_date, name, "柴古唐斯官网", url, "柴古唐斯官网"
+            ))
+        except (RuntimeError, ValueError):
+            continue
+    return dedupe_events(events)
+
+
+def parse_utmb_china(page_html, _base_date):
+    decoder = json.JSONDecoder()
+    events = []
+    cursor = 0
+    while True:
+        start = page_html.find('{"continent":', cursor)
+        if start < 0:
+            break
+        cursor = start + 1
+        try:
+            item, consumed = decoder.raw_decode(page_html[start:])
+            cursor = start + consumed
+        except json.JSONDecodeError:
+            continue
+        if item.get("country") not in ("China", "Hong Kong, China"):
+            continue
+        source_status = (item.get("status") or {}).get("status", "")
+        race_date = parse_official_date(item.get("dateBegin", ""))
+        if race_date and parse_dt_date(race_date) < _base_date:
+            status = "closed"
+        elif source_status == "registration_open":
+            status = "open"
+        elif source_status == "available_soon":
+            status = "upcoming"
+        elif source_status:
+            status = "closed"
+        else:
+            status = "unknown"
+        if item.get("title") and race_date:
+            events.append(trail_event(
+                item["title"], race_date, status, "UTMB World Series官网",
+                item.get("url") or UTMB_EVENTS_URL, source_group="UTMB World Series官网",
+                city=item.get("placeName", ""),
+            ))
+    return dedupe_events(events)
+
+
+def parse_chongli_168(payload, base_date):
+    data = json.loads(payload).get("data") or {}
+    text = normalize_text(data.get("content", ""))
+    name_match = re.search(r"((?:[^\s]+\s*)?20\d{2}崇礼168[^\s]*越野赛)", text)
+    date_match = re.search(r"(20\d{2})年(\d{1,2})月(\d{1,2})日\s*[-至—]\s*(\d{1,2})日", text)
+    if not name_match or not date_match:
+        raise ValueError("Chongli 168 name or race date not found")
+    year, month, day = map(int, date_match.groups()[:3])
+    race_date = datetime(year, month, day, tzinfo=TZ).isoformat()
+    status = registration_status_from_text(text, race_date, base_date)
+    return [trail_event(
+        name_match.group(1), race_date, status, "崇礼168官网", CHONGLI_168_URL,
+        source_group="崇礼168官网", province="河北", city="张家口",
+    )]
+
+
 def dedupe_events(events):
     seen = set()
     deduped = []
@@ -455,6 +636,10 @@ def main():
         ("东京马拉松官网", TOKYO_MARATHON_URL, parse_tokyo_marathon, "Tokyo Marathon official website"),
         ("大阪马拉松官网", OSAKA_MARATHON_URL, parse_osaka_marathon, "Osaka Marathon official website"),
         ("Run in Japan", RUN_IN_JAPAN_URL, parse_run_in_japan, "Run in Japan"),
+        ("朗途体育官网", LETOUR_URL, collect_letour, "朗途体育官网"),
+        ("柴古唐斯官网", TSAIGU_URL, collect_tsaigu, "柴古唐斯官网"),
+        ("UTMB World Series官网", UTMB_EVENTS_URL, parse_utmb_china, "UTMB World Series官网"),
+        ("崇礼168官网", CHONGLI_168_URL, parse_chongli_168, "崇礼168官网"),
     )
     existing_events = load_existing_events(args.output)
     events = []
@@ -470,7 +655,7 @@ def main():
             retained = [
                 event
                 for event in existing_events
-                if event.get("source_name") == persisted_source_name
+                if event.get("source_group", event.get("source_name")) == persisted_source_name
             ]
             if retained:
                 events.extend(retained)

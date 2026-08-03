@@ -79,8 +79,8 @@ def event_status(event, target_date):
         return "closed"
     if reg_end and reg_end > now_end:
         return "open"
-    if event.get("registration_status") == "open":
-        return "open"
+    if event.get("registration_status") in ("open", "closed", "upcoming"):
+        return event["registration_status"]
     return "unknown"
 
 

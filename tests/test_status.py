@@ -22,6 +22,15 @@ class EventStatusTests(unittest.TestCase):
         }
         self.assertEqual(event_status(event, date(2026, 8, 3)), "open")
 
+    def test_explicit_upcoming_status_without_dates(self):
+        event = {
+            "race_date": "2026-12-13T00:00:00+08:00",
+            "registration_start": None,
+            "registration_end": None,
+            "registration_status": "upcoming",
+        }
+        self.assertEqual(event_status(event, date(2026, 8, 3)), "upcoming")
+
 
 if __name__ == "__main__":
     unittest.main()
