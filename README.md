@@ -36,9 +36,11 @@ The `Update marathon events` GitHub Actions workflow runs every day at approxima
 | `race_date` | Race date and time in ISO 8601 format |
 | `province` | Province or region |
 | `city` | City |
+| `country` | Country or region, such as China or Japan |
 | `category` | Certification level or event category |
 | `registration_start` | Registration opening time in ISO 8601 format; may be empty |
 | `registration_end` | Registration deadline in ISO 8601 format; may be empty |
+| `registration_status` | Explicit source status, used when a source reports an open window without exact dates |
 | `source_name` | Name of the information source |
 | `source_url` | Link to the information source |
 | `registration_platform` | Registration platform, such as an official website, Shuxin, or Mala Mala |
@@ -50,6 +52,9 @@ The `Update marathon events` GitHub Actions workflow runs every day at approxima
 ## Candidate Data Sources
 
 - NowRun event calendar: https://www.nowrun.cn/
+- Run in Japan race calendar: https://runinjapan.com/en/calendar
+- Tokyo Marathon official website: https://www.marathon.tokyo/en/participants/
+- Osaka Marathon official website: https://www.osaka-marathon.com/
 - China Marathon event database: https://chinamarathon.com/
 - Official event accounts, websites, and official partner registration platforms
 

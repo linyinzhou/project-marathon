@@ -79,6 +79,8 @@ def event_status(event, target_date):
         return "closed"
     if reg_end and reg_end > now_end:
         return "open"
+    if event.get("registration_status") == "open":
+        return "open"
     return "unknown"
 
 
@@ -98,6 +100,8 @@ def priority_reasons(event):
     reasons = []
     if event.get("category") == "A类":
         reasons.append("A类")
+    if event.get("category") == "日本重点赛事":
+        reasons.append("日本重点赛事")
 
     search_text = " ".join(
         str(event.get(field) or "") for field in ("name", "province", "city", "category", "notes")
