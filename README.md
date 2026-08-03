@@ -24,6 +24,10 @@ By default, `status.py` displays priority events only: A-class events, events in
 
 The `Update marathon events` GitHub Actions workflow runs every day at approximately 06:15 China Standard Time. It collects the current event list, rejects empty results, and commits valid changes to `data/events.json`. The dashboard reads that file when the page opens, so newly committed data appears without a separate site deployment.
 
+## Registered Events
+
+`data/registrations.json` stores persistent snapshots of events the user has entered. The dashboard merges these records with the current public event list, marks them as registered, and shows the number of days until or since race day. Keeping a snapshot ensures a registered event remains visible after registration closes or the source listing disappears.
+
 ## Data Fields
 
 | Field | Description |
