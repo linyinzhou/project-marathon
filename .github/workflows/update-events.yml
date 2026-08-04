@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-marathon-events
+  group: project-marathon-data-writes
   cancel-in-progress: false
 
 jobs:

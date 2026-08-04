@@ -1,0 +1,51 @@
+name: Update registered race
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: Add or remove the race
+        required: true
+        type: choice
+        options:
+          - add
+          - remove
+      event_name:
+        description: Exact event name from the dashboard
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: project-marathon-data-writes
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Update registered race
+        env:
+          ACTION: ${{ inputs.action }}
+          EVENT_NAME: ${{ inputs.event_name }}
+        run: python scripts/update_registration.py --action "$ACTION" --event-name "$EVENT_NAME"
+
+      - name: Commit updated registrations
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/registrations.json
+          if git diff --cached --quiet; then
+            echo "Registered races are unchanged."
+          else
+            git commit -m "Update registered races"
+            git push
+          fi

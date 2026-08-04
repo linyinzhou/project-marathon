@@ -32,6 +32,15 @@ The `Update marathon events` GitHub Actions workflow runs every day at approxima
 
 `data/registrations.json` stores persistent snapshots of events the user has entered. The dashboard merges these records with the current public event list, marks them as registered, and shows the number of days until or since race day. Keeping a snapshot ensures a registered event remains visible after registration closes or the source listing disappears.
 
+To update registered races without editing files locally:
+
+1. Open the repository's **Actions** tab.
+2. Select **Update registered race**.
+3. Choose **Run workflow**.
+4. Select `add` or `remove` and enter the exact event name shown on the dashboard.
+
+The workflow updates `data/registrations.json` and pushes the change automatically. Adding a race requires it to exist in the latest `data/events.json`; removing a race continues to work after it disappears from the current event feed.
+
 ## Data Fields
 
 | Field | Description |
