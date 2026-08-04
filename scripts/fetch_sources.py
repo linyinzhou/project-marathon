@@ -610,6 +610,23 @@ def dedupe_events(events):
     return deduped
 
 
+def add_first_seen_at(events, existing_events):
+    existing_by_key = {
+        ((event.get("name") or "").casefold(), (event.get("race_date") or "")[:10]): event
+        for event in existing_events
+    }
+    for event in events:
+        key = ((event.get("name") or "").casefold(), (event.get("race_date") or "")[:10])
+        existing = existing_by_key.get(key, {})
+        event["first_seen_at"] = (
+            existing.get("first_seen_at")
+            or existing.get("last_checked_at")
+            or event.get("last_checked_at")
+            or datetime.now(TZ).isoformat(timespec="seconds")
+        )
+    return events
+
+
 def save_events(events, path):
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as f:
@@ -669,7 +686,7 @@ def main():
     if missing_sources:
         raise RuntimeError("来源采集失败且没有历史数据：" + "; ".join(missing_sources))
 
-    events = dedupe_events(events)
+    events = add_first_seen_at(dedupe_events(events), existing_events)
     if not events:
         raise RuntimeError("所有赛事来源均未返回有效数据")
     save_events(events, args.output)

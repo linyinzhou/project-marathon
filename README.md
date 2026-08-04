@@ -20,9 +20,9 @@ python scripts/status.py --date 2026-08-02
 
 By default, `status.py` displays priority events only: A-class events, events in selected tier-one or tier-two cities, and gold-label, platinum-label, or label events. Use `--all` to inspect every collected event.
 
-The dashboard keeps the main status filters scoped to Chinese road races. The Upcoming filter shows races whose registration starts within the next seven days; they move to Registration Open when the opening date arrives. Selected Japanese races appear in a separate Overseas Events view.
+The dashboard keeps the main status filters scoped to Chinese road races. The Upcoming filter shows races whose registration starts within the next seven days; they move to Registration Open when the opening date arrives. Open-registration races are ordered by when they were first discovered, with the newest listings first. Selected Japanese races appear in a separate Overseas Events view.
 
-Major Chinese trail races appear in a separate Trail Races view. It displays only the official registration status and race date, sorted chronologically. Event names, dates, and statuses are discovered from the configured organizer websites rather than maintained as a hard-coded race list.
+Major Chinese trail races appear in a separate Trail Races view. It displays only the official registration status and race date, sorted chronologically, and hides races held more than six months ago. Event names, dates, and statuses are discovered from the configured organizer websites rather than maintained as a hard-coded race list.
 
 ## Automatic Updates
 
@@ -53,6 +53,7 @@ The `Update marathon events` GitHub Actions workflow runs every day at approxima
 | `app_only` | Whether registration is available only in an app |
 | `verified` | Whether the record has been cross-checked against an official announcement |
 | `last_checked_at` | Last checked time |
+| `first_seen_at` | Time the event was first discovered; used to show newly published open-registration events first |
 | `notes` | Additional notes |
 
 ## Candidate Data Sources

@@ -25,6 +25,7 @@ const fmtRace=e=>e.race_date?new Intl.DateTimeFormat('zh-CN',{year:'numeric',mon
 const sourceLink=e=>e.source_url?`<a href="${e.source_url}" target="_blank">查看来源</a>`:'';
 const registrationPeriod=e=>e.registration_start&&e.registration_end?fmt(e.registration_start)+' → '+fmt(e.registration_end):e.registration_start?'开始 '+fmt(e.registration_start):e.registration_end?'截止 '+fmt(e.registration_end):'';
 const dayStamp=v=>{let p={};new Intl.DateTimeFormat('en',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date(v)).forEach(x=>p[x.type]=x.value);return Date.UTC(+p.year,+p.month-1,+p.day)};
+const sixMonthsAgo=()=>{let p={};new Intl.DateTimeFormat('en',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()).forEach(x=>p[x.type]=x.value);return Date.UTC(+p.year,+p.month-7,+p.day)};
 const status=e=>{
   let today=dayStamp(Date.now());
   if(e.registration_start){
@@ -59,9 +60,11 @@ function render(){
   region.style.visibility=overseas||trail?'hidden':'visible';
   let x=all.filter(e=>{
     if(overseas)return !isChina(e)&&!isTrail(e);
-    if(trail)return isTrail(e);
+    if(trail)return isTrail(e)&&e.race_date&&dayStamp(e.race_date)>=sixMonthsAgo();
     return isChinaRoad(e)&&(filter==='已报名'?e.registered:filter==='全部'||status(e)===filter)&&(region.value==='全部地区'||e.province===region.value);
-  }).sort((a,b)=>(a.race_date?new Date(a.race_date).getTime():Infinity)-(b.race_date?new Date(b.race_date).getTime():Infinity));
+  }).sort((a,b)=>filter==='报名中'
+    ? (new Date(b.first_seen_at||0)-new Date(a.first_seen_at||0))||(a.source_rank-b.source_rank)
+    : (a.race_date?new Date(a.race_date).getTime():Infinity)-(b.race_date?new Date(b.race_date).getTime():Infinity));
   if(overseas){
     list.innerHTML=x.map(e=>`<article><div><h2>${e.name}</h2><p class="meta">比赛日期 ${fmtRace(e)}</p>${registrationPeriod(e)?`<p class="meta">报名时间 ${registrationPeriod(e)}</p>`:''}</div></article>`).join('')||'没有符合筛选条件的赛事。';
     return;
@@ -75,7 +78,8 @@ function render(){
 
 Promise.all(['events.json','registrations.json'].map(file=>fetch('https://raw.githubusercontent.com/linyinzhou/project-marathon/main/data/'+file+'?v='+Date.now()).then(r=>{if(!r.ok)throw new Error(file);return r.json()}))).then(([d,registered])=>{
   let keys=new Set(registered.map(e=>e.name+'|'+(e.race_date||'')));
-  all=[...new Map([...registered,...d.filter(e=>isTrail(e)||priority(e))].map(e=>{let key=e.name+'|'+(e.race_date||'');return[key,{...e,registered:keys.has(key)}]})).values()];
+  let sourceRanks=new Map(d.map((e,index)=>[e.name+'|'+(e.race_date||''),index]));
+  all=[...new Map([...registered,...d.filter(e=>isTrail(e)||priority(e))].map(e=>{let key=e.name+'|'+(e.race_date||'');return[key,{...e,registered:keys.has(key),source_rank:sourceRanks.get(key)??Number.MAX_SAFE_INTEGER}]})).values()];
   let china=all.filter(isChinaRoad);
   total.textContent=china.length;
   today.textContent=china.filter(e=>status(e)==='今日截止').length;

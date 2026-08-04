@@ -2,6 +2,7 @@ import unittest
 from datetime import date
 
 from scripts.fetch_sources import (
+    add_first_seen_at,
     collect_letour,
     parse_chongli_168,
     parse_osaka_marathon,
@@ -12,6 +13,15 @@ from scripts.fetch_sources import (
 
 
 class JapanSourceParserTests(unittest.TestCase):
+    def test_first_seen_time_is_preserved_for_existing_events(self):
+        events = [{"name": "Race", "race_date": "2026-10-01T00:00:00+08:00", "last_checked_at": "new"}]
+        existing = [{"name": "Race", "race_date": "2026-10-01T08:00:00+08:00", "first_seen_at": "original"}]
+        self.assertEqual(add_first_seen_at(events, existing)[0]["first_seen_at"], "original")
+
+    def test_first_seen_time_uses_initial_check_for_new_events(self):
+        events = [{"name": "New Race", "race_date": "2026-10-01T00:00:00+08:00", "last_checked_at": "initial"}]
+        self.assertEqual(add_first_seen_at(events, [])[0]["first_seen_at"], "initial")
+
     def test_tokyo_general_entry_period(self):
         page = """
         <h1>TOKYO MARATHON 2027</h1><a>March 7, 2027</a>
