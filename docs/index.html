@@ -65,6 +65,8 @@ function render(){
     return isChinaRoad(e)&&(filter==='已报名'?e.registered:filter==='全部'||status(e)===filter)&&(region.value==='全部地区'||e.province===region.value);
   }).sort((a,b)=>filter==='报名中'
     ? (new Date(b.first_seen_at||0)-new Date(a.first_seen_at||0))||(a.source_rank-b.source_rank)
+    : trail
+      ? new Date(b.race_date).getTime()-new Date(a.race_date).getTime()
     : (a.race_date?new Date(a.race_date).getTime():Infinity)-(b.race_date?new Date(b.race_date).getTime():Infinity));
   if(overseas){
     list.innerHTML=x.map(e=>`<article><div><h2>${e.name}</h2><p class="meta">比赛日期 ${fmtRace(e)}</p>${registrationPeriod(e)?`<p class="meta">报名时间 ${registrationPeriod(e)}</p>`:''}</div></article>`).join('')||'没有符合筛选条件的赛事。';
