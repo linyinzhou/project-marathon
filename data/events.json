@@ -1,23 +1,5 @@
 [
   {
-    "name": "2026南昌马拉松",
-    "race_date": "2026-11-15T07:30:00+08:00",
-    "province": "江西",
-    "city": "",
-    "country": "中国",
-    "category": "A类",
-    "registration_start": null,
-    "registration_end": "2026-08-17T18:00:00+08:00",
-    "registration_platform": "",
-    "source_name": "闹跑",
-    "source_url": "https://www.nowrun.cn/",
-    "app_only": false,
-    "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：今日18:00截止。需以赛事官方公告复核。",
-    "first_seen_at": "2026-08-09T06:49:01+08:00"
-  },
-  {
     "name": "2026郑州马拉松",
     "race_date": "2026-10-18T07:00:00+08:00",
     "province": "河南",
@@ -31,8 +13,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：明日17:00截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：今日17:00截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-11T06:58:15+08:00"
   },
   {
@@ -43,14 +25,14 @@
     "country": "中国",
     "category": "A类",
     "registration_start": null,
-    "registration_end": "2026-08-19T23:59:00+08:00",
+    "registration_end": "2026-08-19T17:00:00+08:00",
     "registration_platform": "",
     "source_name": "闹跑",
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：2天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：明日17:00截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -61,14 +43,14 @@
     "country": "中国",
     "category": "C类",
     "registration_start": null,
-    "registration_end": "2026-08-19T23:59:00+08:00",
+    "registration_end": "2026-08-19T17:00:00+08:00",
     "registration_platform": "",
     "source_name": "闹跑",
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：2天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：明日17:00截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-11T06:58:15+08:00"
   },
   {
@@ -79,14 +61,14 @@
     "country": "中国",
     "category": "A类",
     "registration_start": null,
-    "registration_end": "2026-08-19T23:59:00+08:00",
+    "registration_end": "2026-08-19T18:00:00+08:00",
     "registration_platform": "",
     "source_name": "闹跑",
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：2天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：明日18:00截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -97,14 +79,14 @@
     "country": "中国",
     "category": "A类",
     "registration_start": null,
-    "registration_end": "2026-08-19T23:59:00+08:00",
+    "registration_end": "2026-08-19T18:00:00+08:00",
     "registration_platform": "",
     "source_name": "闹跑",
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：2天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：明日18:00截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -121,8 +103,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：3天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：2天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -139,8 +121,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：3天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：2天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -157,8 +139,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：3天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：2天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -175,8 +157,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：4天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：3天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-15T06:42:23+08:00"
   },
   {
@@ -193,8 +175,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：5天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：4天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-08T06:56:53+08:00"
   },
   {
@@ -211,8 +193,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：5天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：4天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -229,8 +211,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：5天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：4天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-13T07:03:58+08:00"
   },
   {
@@ -247,8 +229,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：9天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：8天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -265,8 +247,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：10天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：9天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -283,8 +265,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：10天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：9天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -301,8 +283,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：13天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：12天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -319,8 +301,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：13天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：12天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-15T06:42:23+08:00"
   },
   {
@@ -337,8 +319,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：13天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：12天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-11T06:58:15+08:00"
   },
   {
@@ -355,8 +337,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：13天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：12天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -373,8 +355,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：13天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：12天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-12T07:04:57+08:00"
   },
   {
@@ -391,8 +373,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：14天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：13天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-13T07:03:58+08:00"
   },
   {
@@ -409,8 +391,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：15天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：14天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-06T07:18:47+08:00"
   },
   {
@@ -427,8 +409,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：17天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：16天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-08T06:56:53+08:00"
   },
   {
@@ -445,8 +427,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：21天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：20天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -463,8 +445,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：21天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：20天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-13T07:03:58+08:00"
   },
   {
@@ -481,8 +463,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：22天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：21天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -499,8 +481,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：23天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：22天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-06T22:41:13+08:00"
   },
   {
@@ -517,8 +499,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：23天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：22天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-11T06:58:15+08:00"
   },
   {
@@ -535,8 +517,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：24天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：23天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -553,9 +535,45 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：25天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：24天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
+  },
+  {
+    "name": "2026横琴马拉松",
+    "race_date": "2026-12-27T07:30:00+08:00",
+    "province": "广东",
+    "city": "",
+    "country": "中国",
+    "category": "A类",
+    "registration_start": null,
+    "registration_end": "2026-09-11T23:59:00+08:00",
+    "registration_platform": "",
+    "source_name": "闹跑",
+    "source_url": "https://www.nowrun.cn/",
+    "app_only": false,
+    "verified": false,
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：24天后截止。需以赛事官方公告复核。",
+    "first_seen_at": "2026-08-19T06:43:18+08:00"
+  },
+  {
+    "name": "2026泰州马拉松",
+    "race_date": "2026-10-25T07:30:00+08:00",
+    "province": "江苏",
+    "city": "",
+    "country": "中国",
+    "category": "B类",
+    "registration_start": null,
+    "registration_end": "2026-09-12T23:59:00+08:00",
+    "registration_platform": "",
+    "source_name": "闹跑",
+    "source_url": "https://www.nowrun.cn/",
+    "app_only": false,
+    "verified": false,
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：25天后截止。需以赛事官方公告复核。",
+    "first_seen_at": "2026-08-19T06:43:18+08:00"
   },
   {
     "name": "2026宜都半程马拉松",
@@ -571,8 +589,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：28天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：27天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -589,8 +607,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：29天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：28天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -607,9 +625,27 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：30天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：29天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-18T06:43:37+08:00"
+  },
+  {
+    "name": "2026南昌赣江半程马拉松",
+    "race_date": "2026-11-01T07:30:00+08:00",
+    "province": "江西",
+    "city": "",
+    "country": "中国",
+    "category": "A类",
+    "registration_start": null,
+    "registration_end": "2026-09-28T23:59:00+08:00",
+    "registration_platform": "",
+    "source_name": "闹跑",
+    "source_url": "https://www.nowrun.cn/",
+    "app_only": false,
+    "verified": false,
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：41天后截止。需以赛事官方公告复核。",
+    "first_seen_at": "2026-08-19T06:43:18+08:00"
   },
   {
     "name": "2026莒县半程马拉松",
@@ -625,8 +661,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：43天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：42天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -643,8 +679,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：43天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：42天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -661,8 +697,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：51天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：50天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -679,8 +715,8 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：57天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：56天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
   },
   {
@@ -697,27 +733,9 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：59天后截止。需以赛事官方公告复核。",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：58天后截止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-15T06:42:23+08:00"
-  },
-  {
-    "name": "2026泽州丹河新城半程马拉松",
-    "race_date": "2026-09-13T07:30:00+08:00",
-    "province": "山西",
-    "city": "",
-    "country": "中国",
-    "category": "C类",
-    "registration_start": null,
-    "registration_end": null,
-    "registration_platform": "",
-    "source_name": "闹跑",
-    "source_url": "https://www.nowrun.cn/",
-    "app_only": false,
-    "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
-    "notes": "公开首页报名中卡片：额满即止。需以赛事官方公告复核。",
-    "first_seen_at": "2026-08-07T09:34:04+08:00"
   },
   {
     "name": "2026敦煌半程马拉松",
@@ -733,9 +751,27 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
     "notes": "公开首页报名中卡片：额满即止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-04T22:22:22+08:00"
+  },
+  {
+    "name": "2026泽州丹河新城半程马拉松",
+    "race_date": "2026-09-13T07:30:00+08:00",
+    "province": "山西",
+    "city": "",
+    "country": "中国",
+    "category": "C类",
+    "registration_start": null,
+    "registration_end": null,
+    "registration_platform": "",
+    "source_name": "闹跑",
+    "source_url": "https://www.nowrun.cn/",
+    "app_only": false,
+    "verified": false,
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
+    "notes": "公开首页报名中卡片：额满即止。需以赛事官方公告复核。",
+    "first_seen_at": "2026-08-07T09:34:04+08:00"
   },
   {
     "name": "2026鄂尔多斯半程马拉松",
@@ -751,7 +787,7 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
     "notes": "公开首页报名中卡片：额满即止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-17T06:38:58+08:00"
   },
@@ -769,7 +805,7 @@
     "source_url": "https://www.nowrun.cn/",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:37+08:00",
+    "last_checked_at": "2026-08-19T06:43:18+08:00",
     "notes": "公开首页报名中卡片：额满即止。需以赛事官方公告复核。",
     "first_seen_at": "2026-08-15T06:42:23+08:00"
   },
@@ -788,7 +824,7 @@
     "source_url": "https://www.marathon.tokyo/en/participants/",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-18T06:43:38+08:00",
+    "last_checked_at": "2026-08-19T06:43:19+08:00",
     "notes": "General entry window from the official Tokyo Marathon website.",
     "first_seen_at": "2026-08-04T22:22:23+08:00"
   },
@@ -826,7 +862,7 @@
     "source_url": "https://runinjapan.com/en/races/mt_fuji_marathon_2026",
     "app_only": false,
     "verified": false,
-    "last_checked_at": "2026-08-18T06:43:43+08:00",
+    "last_checked_at": "2026-08-19T06:43:22+08:00",
     "notes": "Run in Japan listing (Full; date_window_open_unverified). Confirm with the official race website.",
     "first_seen_at": "2026-08-04T22:22:32+08:00"
   },
@@ -848,7 +884,7 @@
     "source_url": "http://www.letoursport.com/events?mid=72300",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-18T06:43:45+08:00",
+    "last_checked_at": "2026-08-19T06:43:25+08:00",
     "notes": "Registration status and race date from the official website.",
     "first_seen_at": "2026-08-04T22:22:33+08:00"
   },
@@ -870,9 +906,31 @@
     "source_url": "http://www.letoursport.com/events?mid=74255",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-18T06:43:45+08:00",
+    "last_checked_at": "2026-08-19T06:43:25+08:00",
     "notes": "Registration status and race date from the official website.",
     "first_seen_at": "2026-08-04T22:22:33+08:00"
+  },
+  {
+    "name": "2026FUGA深圳100跑山赛",
+    "race_date": "2026-12-26T00:00:00+08:00",
+    "race_time_known": false,
+    "province": "",
+    "city": "",
+    "country": "中国",
+    "category": "越野赛",
+    "discipline": "trail",
+    "registration_start": null,
+    "registration_end": null,
+    "registration_status": "open",
+    "registration_platform": "朗途体育官网",
+    "source_name": "朗途体育官网",
+    "source_group": "朗途体育官网",
+    "source_url": "http://www.letoursport.com/events?mid=72298",
+    "app_only": false,
+    "verified": true,
+    "last_checked_at": "2026-08-19T06:43:26+08:00",
+    "notes": "Registration status and race date from the official website.",
+    "first_seen_at": "2026-08-19T06:43:26+08:00"
   },
   {
     "name": "2026广州100越野赛",
@@ -892,7 +950,7 @@
     "source_url": "http://www.letoursport.com/events?mid=75253",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-18T06:43:47+08:00",
+    "last_checked_at": "2026-08-19T06:43:27+08:00",
     "notes": "Registration status and race date from the official website.",
     "first_seen_at": "2026-08-04T22:22:34+08:00"
   },
@@ -914,7 +972,7 @@
     "source_url": "http://www.letoursport.com/events?mid=65476",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-18T06:43:48+08:00",
+    "last_checked_at": "2026-08-19T06:43:28+08:00",
     "notes": "Registration status and race date from the official website.",
     "first_seen_at": "2026-08-04T22:22:34+08:00"
   },
@@ -936,7 +994,7 @@
     "source_url": "http://www.letoursport.com/events?mid=75257",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-18T06:43:50+08:00",
+    "last_checked_at": "2026-08-19T06:43:30+08:00",
     "notes": "Registration status and race date from the official website.",
     "first_seen_at": "2026-08-04T22:22:35+08:00"
   },
@@ -980,7 +1038,7 @@
     "source_url": "https://dajingmen.utmb.world",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-18T06:43:57+08:00",
+    "last_checked_at": "2026-08-19T06:43:37+08:00",
     "notes": "Registration status and race date from the official website.",
     "first_seen_at": "2026-08-04T22:22:39+08:00"
   },
@@ -1002,7 +1060,7 @@
     "source_url": "https://mount-yun.utmb.world",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-18T06:43:57+08:00",
+    "last_checked_at": "2026-08-19T06:43:37+08:00",
     "notes": "Registration status and race date from the official website.",
     "first_seen_at": "2026-08-04T22:22:39+08:00"
   },
@@ -1024,7 +1082,7 @@
     "source_url": "https://shudao.utmb.world",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-18T06:43:57+08:00",
+    "last_checked_at": "2026-08-19T06:43:37+08:00",
     "notes": "Registration status and race date from the official website.",
     "first_seen_at": "2026-08-04T22:22:39+08:00"
   },
@@ -1046,7 +1104,7 @@
     "source_url": "https://translantau.utmb.world",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-18T06:43:57+08:00",
+    "last_checked_at": "2026-08-19T06:43:37+08:00",
     "notes": "Registration status and race date from the official website.",
     "first_seen_at": "2026-08-04T22:22:39+08:00"
   },
@@ -1068,7 +1126,7 @@
     "source_url": "https://mogan.utmb.world",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-18T06:43:57+08:00",
+    "last_checked_at": "2026-08-19T06:43:37+08:00",
     "notes": "Registration status and race date from the official website.",
     "first_seen_at": "2026-08-04T22:22:39+08:00"
   },
@@ -1090,7 +1148,7 @@
     "source_url": "https://xiamen.utmb.world",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-18T06:43:57+08:00",
+    "last_checked_at": "2026-08-19T06:43:37+08:00",
     "notes": "Registration status and race date from the official website.",
     "first_seen_at": "2026-08-04T22:22:39+08:00"
   },
@@ -1112,7 +1170,7 @@
     "source_url": "https://sport.luojiweiye.com/api/H5/website/nav_info?id=968&type=1&website_id=9",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-18T06:43:58+08:00",
+    "last_checked_at": "2026-08-19T06:43:38+08:00",
     "notes": "Registration status and race date from the official website.",
     "first_seen_at": "2026-08-04T22:22:39+08:00"
   }
