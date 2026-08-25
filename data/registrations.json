@@ -83,19 +83,20 @@
     "notes": "用户确认已报名；公开赛事信息需以官方公告复核。"
   },
   {
-    "name": "2026长沙马拉松",
-    "race_date": "2026-11-15T07:00:00+08:00",
-    "province": "湖南",
-    "city": "长沙",
+    "name": "2026肇庆马拉松",
+    "race_date": "2026-11-29T00:00:00+08:00",
+    "race_time_known": false,
+    "province": "广东",
+    "city": "肇庆",
     "category": "A类",
     "registration_start": null,
-    "registration_end": "2026-08-11T23:59:00+08:00",
+    "registration_end": null,
     "registration_platform": "",
     "source_name": "用户已报名",
-    "source_url": "https://www.nowrun.cn/",
+    "source_url": "https://static.nfnews.com/content/202608/07/c12699152.html",
     "app_only": false,
     "verified": true,
-    "last_checked_at": "2026-08-04T00:00:00+08:00",
-    "notes": "用户确认已报名；公开赛事信息需以官方公告复核。"
+    "last_checked_at": "2026-08-25T00:00:00+08:00",
+    "notes": "用户确认已报名；比赛日期为2026年11月29日，开跑时刻待确认。"
   }
 ]
