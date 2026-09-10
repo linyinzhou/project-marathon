@@ -97,5 +97,23 @@
     "verified": true,
     "last_checked_at": "2026-09-10T00:00:00+08:00",
     "notes": "用户确认已报名；比赛时间及报名窗口已通过公开赛事信息复核。"
+  },
+  {
+    "name": "2026贵州铜仁·梵净山马拉松",
+    "race_date": "2026-11-29T07:30:00+08:00",
+    "province": "贵州",
+    "city": "",
+    "country": "中国",
+    "category": "A类",
+    "registration_start": null,
+    "registration_end": "2026-10-20T23:59:00+08:00",
+    "registration_platform": "",
+    "source_name": "用户已报名",
+    "source_url": "https://www.nowrun.cn/",
+    "app_only": false,
+    "verified": true,
+    "last_checked_at": "2026-09-10T22:15:39+08:00",
+    "notes": "用户通过 GitHub Actions 确认已报名；公开赛事信息需以官方公告复核。",
+    "first_seen_at": "2026-09-06T07:55:45+08:00"
   }
 ]
