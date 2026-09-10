@@ -81,5 +81,21 @@
     "verified": true,
     "last_checked_at": "2026-08-04T00:00:00+08:00",
     "notes": "用户确认已报名；公开赛事信息需以官方公告复核。"
+  },
+  {
+    "name": "2026左海·福州马拉松",
+    "race_date": "2026-12-27T07:30:00+08:00",
+    "province": "福建",
+    "city": "福州",
+    "category": "精英标牌赛事",
+    "registration_start": "2026-09-10T20:00:00+08:00",
+    "registration_end": "2026-09-19T17:00:00+08:00",
+    "registration_platform": "福州马拉松官网",
+    "source_name": "用户已报名",
+    "source_url": "https://www.fuzhou-marathon.com/",
+    "app_only": false,
+    "verified": true,
+    "last_checked_at": "2026-09-10T00:00:00+08:00",
+    "notes": "用户确认已报名；比赛时间及报名窗口已通过公开赛事信息复核。"
   }
 ]
